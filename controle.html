@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Iluminação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Iluminação com LDR e Arduino</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="controle.html">Controle de Iluminação</a></li>
+                <li><a href="curiosidades.html">Curiosidades sobre o LDR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Montagem Física do LDR no Arduino</h2>
+            <img height="350px" src="PHOTO-2024-10-24-14-44-67.jpg" alt="Montagem do LDR no Arduino" />
+        </section>
+        <section>
+            <h2>Código C++ no IDE Arduino</h2>
+            <pre>
+            <img src="PHOTO-2024-10-24-14-44-57.jpg" alt="Código c++ na IDE Arduino">
+            <code>
+                // C++ code
+                //
+                int num = 0;
+                
+                void setup()
+                {
+                pinMode(A0, INPUT);
+                pinMode(13, OUTPUT);
+                pinMode(12, OUTPUT);
+                pinMode(11, OUTPUT);
+                
+                num = 0;
+                }
+                
+                void loop()
+                {
+                num = analogRead(A0);
+                if (num >= 512) {
+                    digitalWrite(13, HIGH);
+                    digitalWrite(12, HIGH);
+                    digitalWrite(11, HIGH);
+                }
+                if (num < 512) {
+                    delay(5000); // Wait for 5000 millisecond(s)
+                    digitalWrite(13, LOW);
+                    digitalWrite(12, LOW);
+                    digitalWrite(11, LOW);
+                }
+                }
+            </code>
+            </pre>
+        </section>
+        <section>
+            <h2>Filmagem do Controle de Iluminação Funcionando</h2>
+            <video controls>
+                <source src="VIDEO-2024-10-24-14-56-14.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </section>
+        <section>
+            <h2>Medidas com Multímetro</h2>
+            <img height="250px" src="PHOTO-2024-10-24-14-44-58 (1).jpg" alt="Medidas com multímetro" />
+            <p>Aqui temos a medição do resistor de 10k que é representado pelas cores preto, marrom e laranja</p>
+        </section>
+        <section>
+            <h2>Ligação do LDR e LEDs no Tinkercad</h2>
+            <img height="350px" src="PHOTO-2024-10-24-14-44-58.jpg" alt="Ligação do LDR e LEDs no Tinkercad" />
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Nicollas José Prim</p>
+    </footer>
+</body>
+</html>

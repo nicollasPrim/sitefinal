@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+}
+
+header {
+    background: #45639b;
+    color: white;
+    font-family: 'Cooper';
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+h2 {
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    margin-right: 250px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #8f0000;
+    color: white;
+    font-family: 'Bauhaus 93';
+}
+
+a:hover{
+    font-size: 1.25rem;
+    background-color: rgb(47, 53, 138);
+    border-radius: 4px;
+    border: 2px solid;
+}
+
+nav{
+    margin-top: -48px;
+    margin-left: 950px;
+}
